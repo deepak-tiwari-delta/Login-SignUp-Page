@@ -1,0 +1,140 @@
+body{
+    display: grid;
+    place-items: center;
+    gap: 50px;
+    margin: 0;
+    height: 100vh;
+    padding: 0 32px;
+    background-color:#7491d678;
+    font-family: sans-serif;
+
+}
+
+@media (width >= 500px){
+    body {padding : 0;}
+
+    .card{
+        margin: 0;
+        width: 360px;
+    }
+}
+
+.background{
+    position: fixed;
+    top: -50vmin;
+    left: -50vmin;
+    width: 100vmin;
+    height: 100vmin;
+    background: #e89727;
+    border-radius: 47% 53% 61% 39% /
+                     45% 51% 49% 55%;
+}
+
+.card{
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    width: 50%;
+    margin: 0 20px;
+    padding: 170px 30px 54px;
+    border-radius: 24px;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 100px 100px
+     rgb(0 0 0 / 10%);
+}
+
+.card ::before{
+    content: "";
+    position: absolute;
+    top: -880px;
+    left: 50%;
+    translate: -50% 0;
+    width: 1000px;
+    height: 1000px;
+    /* background-color: #216ce7; */
+    border-radius: 50%;
+    cursor: auto;
+}
+
+.background ::after{
+    content: "";
+    position: inherit;
+    right: -50vmin;
+    bottom: -55vmin;
+    height: inherit;
+    width: inherit;
+    background: #143d81;
+
+}
+
+.card .logo{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    translate: -50% 0;
+    width: 64px;
+    height: 64px;
+   
+}
+
+.card > h2{
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 0 38px;
+    color: rgb(18 18 18 / 83%);
+}
+
+.form{
+    margin: 0 0 38px;
+    display: grid;
+    gap: 12px;
+}
+
+.form :is(input, button){
+    width: 100%;
+    height: 56px;
+    border-radius: 28px;
+    font-size: 16px;
+    font-family: inherit;
+
+}
+
+.form > input{
+    border: 0;
+    padding:0 12px ;
+    color: #222222;
+    background: #ededed;
+}
+
+.form > input::placeholder{
+    color: rgb(0 0 0 / 28%);
+}
+
+.form > button{
+    border: 0;
+    color: #f9f9f9;
+    background: #e8a13d;
+    display: grid;
+    place-items: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.form > button:hover{
+    background-color: #fa7f03;
+}
+
+.card > footer{
+    color: #a1a1a1;
+}
+
+.card > footer > a{
+    color: #44c1ea;
+    text-decoration: none;
+
+}
+
+.card > footer > a:hover{
+    color: #143d81;
+}
